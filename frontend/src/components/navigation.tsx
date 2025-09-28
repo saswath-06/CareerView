@@ -44,9 +44,6 @@ export function Navigation() {
             })}
           </div>
 
-          <Button size="sm" className="bg-primary hover:bg-primary/90">
-            Get Started
-          </Button>
         </div>
       </div>
     </nav>

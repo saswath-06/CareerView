@@ -291,10 +291,6 @@ export default function CareerMatchesPage() {
                               View Career Path
                             </Button>
                           </Link>
-                          <Button variant="ghost">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Find Jobs
-                          </Button>
                         </div>
                       </div>
                     </div>

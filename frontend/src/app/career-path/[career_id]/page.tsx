@@ -688,15 +688,6 @@ export default function CareerPathPage({ params }: { params: { career_id: string
                 Back to Matches
               </Button>
             </Link>
-            <Button 
-              onClick={saveCareerPathManually}
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-2"
-            >
-              <Save className="w-4 h-4" />
-              Save Career Path
-            </Button>
           </div>
 
           <div className="mb-12">
