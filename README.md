@@ -196,20 +196,6 @@ CareerView/
 - Configure API endpoints
 - Set up environment variables
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **OpenAI** for GPT-4 and speech APIs
@@ -218,23 +204,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Azure** for cloud storage services
 - **spaCy** for natural language processing
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/saswath-06/CareerView/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/saswath-06/CareerView/discussions)
-- **Email**: [Your Contact Email]
-
 ## 🌟 Star the Repository
 
 If you find CareerView helpful, please give it a ⭐ on GitHub!
 
 ---
-
-<div align="center">
-
-**Built with ❤️ for career transformation**
-
-[![GitHub stars](https://img.shields.io/github/stars/saswath-06/CareerView?style=social)](https://github.com/saswath-06/CareerView/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/saswath-06/CareerView?style=social)](https://github.com/saswath-06/CareerView/network)
-
-</div>
