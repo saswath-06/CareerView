@@ -1,173 +1,240 @@
-# CareerView MVP 🎯
+# 🚀 CareerView - AI-Powered Career Transition Platform
 
-A hackathon MVP for career transition platform that analyzes resumes, matches users to potential career paths, and provides AI-powered persona interactions.
+<div align="center">
+
+![CareerView Logo](https://img.shields.io/badge/CareerView-AI%20Career%20Platform-blue?style=for-the-badge&logo=rocket)
+
+**Transform your career with AI-powered insights, personalized matches, and intelligent guidance.**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2-black)](https://nextjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)](https://fastapi.tiangolo.com/)
+
+</div>
+
+## 🌟 Overview
+
+CareerView is an innovative AI-powered platform that helps professionals discover their next career path through intelligent resume analysis, personalized career matching, and interactive AI personas. Built with cutting-edge technologies, it provides comprehensive career guidance tailored to your unique skills and aspirations.
+
+## ✨ Key Features
+
+### 🎯 **Intelligent Career Matching**
+- **AI-Powered Analysis**: Advanced resume parsing using spaCy and NLP
+- **Personalized Matches**: GPT-4 powered career recommendations
+- **Skill Gap Analysis**: Identify missing skills for your target roles
+- **Match Scoring**: Detailed compatibility scores for each career path
+
+### 🤖 **Interactive AI Personas**
+- **Future Self Chat**: Talk to AI personas representing your target careers
+- **Voice Conversations**: Web-based voice chat using OpenAI's speech APIs
+- **Personalized Guidance**: AI trained on your background and goals
+- **Real-time Insights**: Get instant career advice and industry knowledge
+
+### 📈 **Dynamic Career Paths**
+- **Learning Roadmaps**: GPT-generated personalized learning paths
+- **Skill Development**: Step-by-step skill acquisition plans
+- **Progress Tracking**: Monitor your career transition journey
+- **Resource Recommendations**: Curated learning materials and courses
+
+### 💾 **Persistent Data Storage**
+- **Azure Blob Storage**: Secure cloud storage for all user data
+- **Career Matches**: Save and revisit your personalized matches
+- **Learning Paths**: Access your customized roadmaps anytime
+- **Chat History**: Preserve conversations with AI personas
+
+## 🏗️ Architecture
+
+### **Frontend (Next.js 14)**
+- **Framework**: Next.js with TypeScript
+- **Styling**: Tailwind CSS with modern UI components
+- **State Management**: React hooks and context
+- **Voice Integration**: Web Speech API for voice interactions
+
+### **Backend (FastAPI)**
+- **API Framework**: FastAPI with async support
+- **AI Integration**: OpenAI GPT-4 for intelligent analysis
+- **Document Processing**: PyPDF2, python-docx for resume parsing
+- **Storage**: Azure Blob Storage for persistent data
+
+### **AI & ML Stack**
+- **Language Processing**: spaCy for NLP and text analysis
+- **Vector Search**: FAISS for semantic similarity matching
+- **AI Models**: OpenAI GPT-4o for career matching and persona generation
+- **Voice AI**: OpenAI Speech Recognition and Synthesis
 
 ## 🚀 Quick Start
 
-### Option 1: Automatic Startup (Recommended)
-```bash
-python start_dev.py
+### Prerequisites
+- Python 3.8+
+- Node.js 18+
+- Azure Storage Account (optional)
+- OpenAI API Key
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/saswath-06/CareerView.git
+   cd CareerView
+   ```
+
+2. **Backend Setup**
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
+
+3. **Frontend Setup**
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+4. **Environment Configuration**
+   ```bash
+   # Backend (.env)
+   OPENAI_API_KEY=your_openai_api_key_here
+   AZURE_STORAGE_CONNECTION_STRING=your_azure_connection_string
+   AZURE_STORAGE_ACCOUNT_NAME=your_storage_account_name
+   ```
+
+5. **Run the Application**
+   ```bash
+   # Terminal 1 - Backend
+   cd backend
+   python main.py
+   
+   # Terminal 2 - Frontend
+   cd frontend
+   npm run dev
+   ```
+
+6. **Access the Application**
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8000
+   - API Docs: http://localhost:8000/docs
+
+## 📱 User Journey
+
+### 1. **Upload Resume**
+- Upload your resume (PDF/DOCX)
+- AI analyzes your skills, experience, and background
+- Get instant feedback on your profile
+
+### 2. **Discover Matches**
+- View personalized career recommendations
+- See compatibility scores and skill gaps
+- Explore detailed career descriptions
+
+### 3. **Chat with AI Personas**
+- Select a career path to explore
+- Chat with an AI persona representing that role
+- Get personalized advice and insights
+- Use voice chat for natural conversations
+
+### 4. **Follow Learning Paths**
+- Access customized learning roadmaps
+- Track your skill development progress
+- Get recommended resources and courses
+
+## 🔧 API Endpoints
+
+### **Core Endpoints**
+- `POST /upload-resume` - Upload and analyze resume
+- `GET /career-matches/{user_id}` - Get personalized career matches
+- `GET /career-path/{career_id}` - Get learning roadmap
+- `POST /voice-chat/openai-chat/{persona_id}` - AI voice chat
+
+### **AI Persona Endpoints**
+- `GET /personas` - List available AI personas
+- `POST /chat/{persona_id}` - Text chat with persona
+- `POST /voice-chat/{persona_id}` - Voice chat with persona
+
+## 🛠️ Development
+
+### **Project Structure**
+```
+CareerView/
+├── backend/                 # FastAPI backend
+│   ├── main.py             # Main application
+│   ├── resume_parser.py    # Resume analysis
+│   ├── gpt4_career_matcher.py # AI matching
+│   ├── persona_chat.py     # AI personas
+│   ├── azure_storage.py    # Data persistence
+│   └── requirements.txt    # Python dependencies
+├── frontend/               # Next.js frontend
+│   ├── src/
+│   │   ├── app/           # Pages and routing
+│   │   ├── components/    # React components
+│   │   └── lib/          # Utilities
+│   └── package.json      # Node dependencies
+└── README.md             # This file
 ```
 
-### Option 2: Manual Startup
-```bash
-# Terminal 1: Backend
-cd backend
-python -m uvicorn main:app --reload --host 127.0.0.1 --port 8000
+### **Key Technologies**
+- **Backend**: FastAPI, OpenAI API, Azure Blob Storage, spaCy
+- **Frontend**: Next.js 14, TypeScript, Tailwind CSS, Web Speech API
+- **AI/ML**: GPT-4, FAISS, sentence-transformers, NLP processing
 
-# Terminal 2: Frontend  
-cd frontend
-npm run dev
-```
+## 🔒 Security & Privacy
 
-### Option 3: Test Everything
-```bash
-python test_app.py
-```
+- **Environment Variables**: All sensitive data stored in environment variables
+- **Secure Storage**: Azure Blob Storage with proper access controls
+- **API Security**: FastAPI with proper validation and error handling
+- **No Hardcoded Secrets**: All API keys and credentials externalized
 
-## 📍 URLs
+## 🚀 Deployment
 
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8000
-- **API Documentation**: http://localhost:8000/docs
+### **Backend Deployment**
+- Deploy to Azure App Service, AWS Lambda, or similar
+- Configure environment variables
+- Set up Azure Blob Storage connection
 
-## 🎯 Current Features (Working)
+### **Frontend Deployment**
+- Deploy to Vercel, Netlify, or similar
+- Configure API endpoints
+- Set up environment variables
 
-✅ **Resume Upload**
-- Drag & drop PDF/DOCX files
-- File validation and size limits
-- Connected to backend API
+## 🤝 Contributing
 
-✅ **Backend API**
-- FastAPI with CORS enabled
-- Resume upload endpoint
-- Mock career matching data
-- Health check endpoints
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-✅ **Frontend UI**
-- Modern React/Next.js interface
-- Tailwind CSS styling
-- Responsive design
-- File upload with progress
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-## 🔄 Demo Flow
+## 📄 License
 
-1. **Visit** http://localhost:3000
-2. **Upload** a PDF or DOCX resume
-3. **See** mock parsing results (skills extraction)
-4. **Next**: Career matching dashboard (coming next)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🏗️ MVP Progress
+## 🙏 Acknowledgments
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| Project Setup | ✅ Complete | Directory structure, configs |
-| Backend API | ✅ Complete | FastAPI with upload endpoint |
-| Frontend UI | ✅ Complete | Next.js with Tailwind |
-| Resume Upload | ✅ Complete | File upload with validation |
-| Resume Parsing | 🔄 Mock Data | spaCy + PyPDF2 integration next |
-| Career Matching | ⏳ Pending | Vector embeddings + O*NET |
-| Dashboard UI | ⏳ Pending | Career matches display |
-| AI Personas | ⏳ Pending | GPT-4 chat integration |
-| Deployment | ⏳ Pending | Vercel + Render setup |
+- **OpenAI** for GPT-4 and speech APIs
+- **FastAPI** for the excellent web framework
+- **Next.js** for the React framework
+- **Azure** for cloud storage services
+- **spaCy** for natural language processing
 
-## 🛠️ Tech Stack
+## 📞 Support
 
-**Frontend**
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- Lucide React (icons)
+- **Issues**: [GitHub Issues](https://github.com/saswath-06/CareerView/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/saswath-06/CareerView/discussions)
+- **Email**: [Your Contact Email]
 
-**Backend**
-- FastAPI (Python)
-- Uvicorn (ASGI server)
-- File upload handling
-- CORS middleware
+## 🌟 Star the Repository
 
-**Planned Integrations**
-- spaCy (NLP)
-- PyPDF2 (PDF parsing)
-- OpenAI GPT-4 (AI personas)
-- O*NET API (job data)
-
-## 📋 Next Development Steps
-
-1. **Resume Parsing Engine** (2-3 hours)
-   - Install spaCy + PyPDF2
-   - Extract skills, experience, job titles
-   - Replace mock data with real parsing
-
-2. **Career Matching System** (3-4 hours)
-   - O*NET job taxonomy integration
-   - Vector embeddings for skills
-   - Similarity matching algorithm
-
-3. **Dashboard UI** (2-3 hours)
-   - Career matches display
-   - Skills breakdown visualization
-   - Salary and growth data
-
-4. **AI Persona Chat** (3-4 hours)
-   - OpenAI API integration
-   - Role-specific personas
-   - Chat interface
-
-## 🎯 Hackathon Demo Script
-
-1. **Show landing page** - Clean, professional UI
-2. **Upload resume** - Drag & drop functionality
-3. **Display parsing** - Skills and experience extraction
-4. **Career matches** - Top 5 recommendations with %
-5. **Chat with persona** - AI Product Manager conversation
-6. **Salary insights** - Economic data visualization
-
-## 🔧 Development Commands
-
-```bash
-# Install backend dependencies
-cd backend
-pip install -r requirements.txt
-
-# Install frontend dependencies
-cd frontend
-npm install
-
-# Run tests
-python test_app.py
-
-# Check API docs
-# Visit http://localhost:8000/docs
-```
-
-## 📁 Project Structure
-
-```
-CareerSim/
-├── backend/           # FastAPI backend
-│   ├── main.py       # API endpoints
-│   ├── requirements.txt
-│   └── uploads/      # Resume storage
-├── frontend/         # Next.js frontend
-│   ├── src/app/      # App router pages
-│   ├── package.json
-│   └── tailwind.config.js
-├── data/            # O*NET and salary data
-├── spec.md          # Detailed specification
-├── start_dev.py     # Development server
-└── test_app.py      # System tests
-```
-
-## 🎉 Success Metrics
-
-- [x] Resume upload works end-to-end
-- [x] Frontend/backend integration
-- [x] Professional UI/UX
-- [ ] Real resume parsing
-- [ ] Career matching accuracy >70%
-- [ ] AI personas respond coherently
-- [ ] Full demo flow <3 minutes
+If you find CareerView helpful, please give it a ⭐ on GitHub!
 
 ---
 
-**Built for Hackathon** | **Target: 24-36 hours** | **Status: Foundation Complete** ✅
+<div align="center">
+
+**Built with ❤️ for career transformation**
+
+[![GitHub stars](https://img.shields.io/github/stars/saswath-06/CareerView?style=social)](https://github.com/saswath-06/CareerView/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/saswath-06/CareerView?style=social)](https://github.com/saswath-06/CareerView/network)
+
+</div>
